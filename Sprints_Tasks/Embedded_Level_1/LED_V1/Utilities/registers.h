@@ -30,12 +30,5 @@
 #define DDRD	(*((volatile uint8_t *)(0x31)))
 #define PIND	(*((volatile uint8_t *)(0x30)))
 
-//interrupt registers
-#define MCUCR	(*((volatile uint8_t *)(0x55)))
-#define MCUCSR	(*((volatile uint8_t *)(0x54)))
-#define GICR	(*((volatile uint8_t *)(0x5B)))
-#define GIFR	(*((volatile uint8_t *)(0x5A)))
-
-
 
 #endif /* REGISTERS_H_ */
