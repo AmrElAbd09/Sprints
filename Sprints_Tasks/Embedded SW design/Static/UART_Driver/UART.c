@@ -9,10 +9,7 @@
 
 void USART_init(void)
 {
-	uint16_t baud;
-	//Enable writing to UCSRC
-	SET_BIT(UCSRC,URSEL);
-	
+	uint16_t baud;	
 #if enable_selector == Transmit_Enable
 				SET_BIT(UCSRB,TXEN);
 				#elif enable_selector == Receive_Enable
@@ -34,7 +31,9 @@ void USART_init(void)
 
 UBRRL = (uint8_t)baud;
 UBRRH = (uint8_t)(baud >> 8);
-
+//Enable writing to UCSRC
+SET_BIT(UCSRC,URSEL);
+	
 //PARITY config
 #if parity_mode_selector == NO_PARITY
 			
