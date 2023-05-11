@@ -10,6 +10,8 @@
 #define UART_CONFIG_H_
 
 
+#define  enable_selector Transmit_Receive_Enable
+
 //*******************************************************************************************************
  /* configure speed modes
  // speed modes
