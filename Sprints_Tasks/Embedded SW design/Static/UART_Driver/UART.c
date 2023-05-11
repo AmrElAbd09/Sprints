@@ -9,7 +9,9 @@
 
 void USART_init(void)
 {
-	uint16_t baud;	
+   uint16_t baud;	
+	
+//Enables config	
 #if enable_selector == Transmit_Enable
 				SET_BIT(UCSRB,TXEN);
 				#elif enable_selector == Receive_Enable
