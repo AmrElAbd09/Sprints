@@ -9,7 +9,12 @@
 #ifndef UART_CONFIG_H_
 #define UART_CONFIG_H_
 
-
+//*******************************************************************************************************
+ /* configure enable modes
+ // Transmit_Enable    
+    Receive_Enable
+    Transmit_Receive_Enable
+*/
 #define  enable_selector Transmit_Receive_Enable
 
 //*******************************************************************************************************
