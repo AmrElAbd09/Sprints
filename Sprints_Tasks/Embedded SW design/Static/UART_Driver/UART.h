@@ -14,9 +14,9 @@
 #include "../DIO/DIO.h"
 
 //enables config
-#define Transmit_Enable				   0
-#define Receive_Enable				    1
-#define Transmit_Receive_Enable		2
+#define Transmit_Enable				      0
+#define Receive_Enable				      1
+#define Transmit_Receive_Enable		  2
 
 // speed modes
 #define  normal_speed     0
