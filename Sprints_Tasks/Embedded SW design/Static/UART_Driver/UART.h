@@ -38,19 +38,7 @@
 #define  _7_DATA_BITS    7
 #define  _8_DATA_BITS    8
 #define  _9_DATA_BITS    9
-// CPU frequency
-#define   _4_MHZ         0
-#define   _8_MHZ         1
-#define  _16_MHZ         2
-#define  TOTAL_CPU_F     3
-// baud rate 
-#define  BAUD_2400       0
-#define  BAUD_4800       1
-#define  BAUD_9600       2
-#define  BAUD_14400      3
-#define  BAUD_19200      4
-#define  BAUD_28800      5
-#define  TOTAL_BAUD_RATE 6
+
 // register bits config
 #define  RXEN  4
 #define  TXEN  3
