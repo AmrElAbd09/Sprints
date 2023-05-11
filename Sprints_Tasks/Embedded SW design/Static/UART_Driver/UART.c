@@ -10,6 +10,17 @@
 void USART_init(void)
 {
 	uint16_t baud;
+	//Enable writing to UCSRC
+	SET_BIT(UCSRC,URSEL);
+	
+#if enable_selector == Transmit_Enable
+				SET_BIT(UCSRB,TXEN);
+				#elif enable_selector == Receive_Enable
+				SET_BIT(UCSRB,RXEN);
+				#elif enable_selector == Transmit_Receive_Enable
+				SET_BIT(UCSRB,RXEN);
+				SET_BIT(UCSRB,TXEN);
+#endif
 //Speed config	
 #if (speed_mode_selector == normal_speed)
 
@@ -24,13 +35,6 @@ void USART_init(void)
 UBRRL = (uint8_t)baud;
 UBRRH = (uint8_t)(baud >> 8);
 
-//Enable UART  receiver
-SET_BIT(UCSRB,RXEN);
-//Enable UART  transmitter 
-SET_BIT(UCSRB,TXEN);
-//Enable writing to UCSRC
-SET_BIT(UCSRC,URSEL);
-  
 //PARITY config
 #if parity_mode_selector == NO_PARITY
 			
