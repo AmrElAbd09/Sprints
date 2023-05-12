@@ -14,7 +14,7 @@
     Receive_Enable
     Transmit_Receive_Enable
 */
-#define  Enable_config Transmit_Receive_Enable
+#define  Enable_config 		Transmit_Receive_Enable
 
 //*******************************************************************************************************
  /* configure speed modes
