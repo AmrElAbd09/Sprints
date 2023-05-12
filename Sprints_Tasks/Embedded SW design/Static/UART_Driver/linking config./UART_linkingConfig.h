@@ -64,12 +64,12 @@ typedef enum{
 typedef struct
 {
 	EN_speed_mode_selector			    Speed_config;
-	EN_enable_selector					Enable_config;
+	EN_enable_selector			    Enable_config;
 	EN_parity_mode_selector			    Parity_config;
-	EN_sync_mode_selector				Synch_config;
+	EN_sync_mode_selector			    Synch_config;
 	EN_number_stopBits_selector		    StopBits_config;
 	EN_number_dataBits_selector		    DataSize_config;
-	EN_baud_rate_selector				BaudRate_config;
+	EN_baud_rate_selector			    BaudRate_config;
 
 }ST_Config_Type;
 
