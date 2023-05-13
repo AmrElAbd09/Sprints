@@ -9,7 +9,7 @@
 
 void USART_init(void)
 {
-   uint16_t baud;	
+   uint16_t local_baud;	
 	
 //Enables config	
 #if enable_selector == Transmit_Enable
@@ -24,15 +24,15 @@ void USART_init(void)
 #if (speed_mode_selector == normal_speed)
 
 				RESET_BIT(UCSRA, U2X);
-				baud = ((cpu_freq_selector / (16*baud_rate_selector)) - 1);
+				local_baud = ((cpu_freq_selector / (16*baud_rate_selector)) - 1);
 				#elif speed_mode_selector == double_speed
 				
 				SET_BIT(UCSRA, U2X);
-				baud = (cpu_freq_selector / (8*baud_rate_selector)) - 1;
+				local_baud = (cpu_freq_selector / (8*baud_rate_selector)) - 1;
 #endif
 
-UBRRL = (uint8_t)baud;
-UBRRH = (uint8_t)(baud >> 8);
+UBRRL = (uint8_t)local_baud;
+UBRRH = (uint8_t)(local_baud >> 8);
 //Enable writing to UCSRC
 SET_BIT(UCSRC,URSEL);
 	
